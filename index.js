@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import MPyreFinancials from './router';
 
-AppRegistry.registerComponent('MPyreFinancials', () => App);
+AppRegistry.registerComponent('MPyreFinancials', () => MPyreFinancials);

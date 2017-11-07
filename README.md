@@ -12,6 +12,7 @@ MPyre Finances is not a typical stock search engine, it is a stock search engine
 * Using the command line, navigate to the desired folder. Once there, execute the commands below:
 
 ```
+$ sudo npm install npm -g
 $ npm install -g react-native-cli
 $ git clone https://github.com/vcorja1/MPyreFinancials.git
 $ cd MPyreFinancials
