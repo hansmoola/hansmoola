@@ -3,10 +3,11 @@ import 'react-native';
 import renderer from 'react-test-renderer';
 
 import React from 'react';
-import Menu from '../views/Menu';
+import About from '../views/About';
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <Menu />
-  );
+	const navigation = { navigate: jest.fn() };
+  	const tree = renderer.create(
+    	<About navigation={navigation} />
+  	);
 });

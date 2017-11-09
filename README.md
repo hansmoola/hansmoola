@@ -56,3 +56,14 @@ $ react-native run-andoid
 * Make changes to your files, and in the Android Emulator click `R R` to reload and immediately view the changes.
 
 * For more instructions, including on how to run on a real device, please refer to the [official React Native Getting Started page](https://facebook.github.io/react-native/docs/getting-started.html).
+
+
+# Unit Testing the Code
+
+* Unit testing will be done with Jest. Test files are located in the ` __tests__ ` folder
+
+* To run the test, use the command line:
+
+```
+$ npm test
+```

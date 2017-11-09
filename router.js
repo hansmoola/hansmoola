@@ -1,22 +1,46 @@
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 
-import Menu from './views/Menu';
+// Import Pages
+import About from './views/About';
+import Search from './views/Search';
+import Portfolio from './views/Portfolio';
+import Stock from './views/Stock';
+import Tutorial from './views/Tutorial';
 
-const MenuScreen = props => {
-  return <Menu navigation={props.navigation} />;
-};
 
-MenuScreen.navigationOptions = {
-  title: "MPyre Financials",
-  headerTitleStyle : {
-    textAlign: 'center',
-    alignSelf:'center'
-  }
-};
+// Set up Tab Navigator for Main Menu
+const MainMenu = TabNavigator ({
+	About: {
+		screen: About
+	},
+  	Search: {
+		screen: Search
+	},
+  	Portfolio: {
+  		screen: Portfolio
+  	}
+});
 
+
+// Set up the Navigator
 const AppNavigator = StackNavigator({
-  Menu: { screen: MenuScreen }
+	MainMenu: { 
+	  	screen: MainMenu,
+	  	navigationOptions: ({ navigation }) => ({
+	      	title: 'MPyre Financials',
+	      	headerTitleStyle: {
+			    textAlign: 'center',
+			    alignSelf: 'center'
+	      	}
+	    })
+  	},
+  	Stock: {
+  		screen: Stock
+  	},
+  	Tutorial: {
+  		screen: Tutorial
+  	}
 });
 
 export default AppNavigator;
