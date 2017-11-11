@@ -16,17 +16,18 @@ const {height:h, width:w} = Dimensions.get('window');
 
 // The Stock Page Content
 class Stock extends Component {
-  static navigationOptions = {
-    title: '${this.props.navigation.state.params.name} Stock',
+  static navigationOptions = ({ navigation }) => ({
+    title: `${navigation.state.params.stockData.symbol} (${navigation.state.params.stockData.name})`,
     headerTitleStyle: {
       textAlign: 'center',
       alignSelf: 'center'
     },
     headerRight: <View />
-  };
+  });
 
   render () {
     const { navigate } = this.props.navigation;
+    const { stockData } = this.props.navigation.state.params;
 
     return (
       <View style={styles.container}>
